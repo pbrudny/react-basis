@@ -73,7 +73,7 @@ var MoviesList = React.createClass({
        return React.createElement('div', {},
             React.createElement('h1', {}, 'Lista filmów'),
             React.createElement('ul', {},
-                this.props.movies.map(function(movie) {
+                this.props.movies.map(function(movie) { //todo: Is that ok?
                     return React.createElement(Movie, {key: movie.id, movie: movie});
                 })
             )
