@@ -31,37 +31,37 @@ var Movie = React.createClass({
     },
     render: function () {
         return React.createElement('li', {},
-            React.createElement(MovieTitle, {movie: this.props.movie}),
-            React.createElement(MovieDescription, {movie: this.props.movie}),
-            React.createElement(MovieImage, {movie: this.props.movie}),
+            React.createElement(MovieTitle, {title: this.props.movie.title}),
+            React.createElement(MovieDescription, {description: this.props.movie.desc}),
+            React.createElement(MovieImage, {imagePath: this.props.movie.imagePath})
         );
     }
 });
 
 var MovieTitle = React.createClass({
     propTypes: {
-        movie: React.PropTypes.object.isRequired
+        title: React.PropTypes.string.isRequired
     },
     render: function () {
-        return React.createElement('h1', {}, this.props.movie.title);
+        return React.createElement('h1', {}, this.props.title);
     }
 });
 
 var MovieDescription = React.createClass({
     propTypes: {
-        movie: React.PropTypes.object.isRequired
+        description: React.PropTypes.string.isRequired
     },
     render: function () {
-        return React.createElement('p', {}, this.props.movie.desc)
+        return React.createElement('p', {}, this.props.description)
     }
 });
 
 var MovieImage = React.createClass({
     propTypes: {
-        movie: React.PropTypes.object.isRequired
+        imagePath: React.PropTypes.string.isRequired
     },
     render: function () {
-        return React.createElement('img', {src: this.props.movie.imagePath, width: '150px'})
+        return React.createElement('img', {src: this.props.imagePath, width: '150px'})
     }
 });
 
@@ -73,7 +73,7 @@ var MoviesList = React.createClass({
        return React.createElement('div', {},
             React.createElement('h1', {}, 'Lista filmów'),
             React.createElement('ul', {},
-                this.props.movies.map(function(movie) { //todo: Is that ok?
+                this.props.movies.map(function(movie) {
                     return React.createElement(Movie, {key: movie.id, movie: movie});
                 })
             )
