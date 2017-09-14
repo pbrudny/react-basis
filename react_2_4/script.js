@@ -82,4 +82,5 @@ var MoviesList = React.createClass({
 });
 
 var element = React.createElement(MoviesList, {movies: movies});
+
 ReactDOM.render(element, document.getElementById('app'));
