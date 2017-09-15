@@ -65,6 +65,10 @@ var MovieImage = React.createClass({
     }
 });
 
+var MoviesElements = movies.map(function(movie) {
+    return React.createElement(Movie, {key: movie.id, movie: movie});
+});
+
 var MoviesList = React.createClass({
     propTypes: {
         movies: React.PropTypes.array
