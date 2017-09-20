@@ -24,12 +24,14 @@ var contactForm = {
     lastName: '',
     email: ''
 };
+
 var App = React.createClass({
    render: function () {
        return (
-           React.createElement('div', {className: 'app'}),
+           React.createElement('div', {className: 'app'},
            React.createElement(ContactForm, {contact: contactForm}),
-           React.createElement(Contact, {contacts: items}, {})
+           React.createElement(Contacts, {items: contacts}, {})
+           )
        )
    }
 });
