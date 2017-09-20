@@ -1,0 +1,15 @@
+.counter {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 20px;
+    width: 200px;
+}
+
+.counterLabel {
+    margin-right: 30px;
+}
+
+.counter button {
+    margin-left: 10px;
+    width: 30px;
+}
