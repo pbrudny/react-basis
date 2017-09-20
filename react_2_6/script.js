@@ -25,6 +25,19 @@ var Counter = React.createClass({
     }
 });
 
-var element = React.createElement(Counter);
+var Counters = React.createClass({
+    render: function () {
+        return (
+            React.createElement('div', {className: 'counters'},
+                React.createElement('h1', {}, 'Niezależne liczniki'),
+                React.createElement(Counter),
+                React.createElement(Counter),
+                React.createElement(Counter),
+                React.createElement(Counter)
+                )
+        )
+    }
+});
+var element = React.createElement(Counters);
 ReactDOM.render(element, document.getElementById('app'));
 
