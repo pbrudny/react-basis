@@ -1,25 +1,24 @@
 .app {
-    display: inline-block;
+    display: block;
     background: #FFFFFF;
     border: 1px solid #979797;
-}
-
-.contactsList {
-    margin-right: 20px;
+    width: 62%;
+    margin: 0 auto;
 }
 
 .contactItem {
-    display: block;
+    display: inline-flex;
+    margin-left: 5%;
+    margin-bottom: 20px;
     background: #E8EAF6;
-    margin-top: 20px;
-    height: 100px;
+    width: 90%;
 }
 
 .contactForm {
-    display: inline-block;
+    width: 90%;
+    display: block;
     border: 1px solid #979797;
-    padding: 30px;
-    margin: 20px;
+    margin: 10px auto;
 }
 
 .contactForm input {
@@ -30,7 +29,7 @@
     background: #75A9F9;
     border: 0;
     padding: 10px;
-    margin: 20px;
+    margin: 5px 10%;
     font-family: Helvetica;
     font-size: 14px;
     color: #000000;
@@ -43,10 +42,10 @@
 }
 
 .contactLabel {
+    display: block;
     margin-top: 10px;
     font-family: Helvetica;
     font-size: 14px;
     color: #4A4A4A;
     text-align: left;
-    padding-left: 200px;
 }
